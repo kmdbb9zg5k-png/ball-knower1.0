@@ -22,7 +22,7 @@ jobs:
       - name: Extract Ball Knower ZIP
         run: |
           mkdir -p /tmp/ball-knower
-          unzip -o "ball-knower (1).zip" -d /tmp/ball-knower
+          unzip -o "Archive.zip" (1)-d /tmp/ball-knower
           cp -a /tmp/ball-knower/. .
 
       - name: Commit extracted project
