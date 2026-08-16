@@ -1,0 +1,41 @@
+name: Unpack Ball Knower Source
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/unpack.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract Ball Knower ZIP
+        run: |
+          mkdir -p /tmp/ball-knower
+          unzip -o "ball-knower (1).zip" -d /tmp/ball-knower
+          cp -a /tmp/ball-knower/. .
+
+      - name: Commit extracted project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit"
+            exit 0
+          fi
+
+          git commit -m "Extract Ball Knower project files"
+          git push
