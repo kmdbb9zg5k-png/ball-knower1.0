@@ -67,7 +67,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ isOpen, onClose 
     <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center overflow-hidden">
       <video
         ref={videoRef}
-        src="/assets/ball-knower-opening.mp4"
+        src="/assets/Creating_football_intro_video_202608160231.mp4"
         className="absolute inset-0 h-full w-full object-cover bg-black"
         playsInline
         preload="auto"
