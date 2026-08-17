@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useBallKnower } from '../context/BallKnowerContext';
+import { useBallKnower } from './BallKnowerContext';
 import { X, Shield, Mail, ArrowRight, User, CheckCircle2 } from 'lucide-react';
 
 interface AuthModalProps {
