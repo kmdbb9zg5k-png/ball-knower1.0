@@ -8,7 +8,7 @@ import {
   DEFAULT_SALARY_CAP,
   TOTAL_ROSTER_SIZE,
 } from './types';
-import { calculateTeamRatings } from './utils/evaluation';
+import { calculateTeamRatings } from './evaluation';
 import { simulateFullSeason } from './utils/simulation';
 import { generateAiLeagueMembers, AI_ARCHETYPES, buildRosterForArchetype } from './utils/aiOpponents';
 import { PLAYERS_DATABASE } from './data/players';
