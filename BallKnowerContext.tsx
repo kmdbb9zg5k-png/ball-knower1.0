@@ -7,8 +7,10 @@ import {
   ROSTER_REQUIREMENTS,
   DEFAULT_SALARY_CAP,
   TOTAL_ROSTER_SIZE,
+} from './types';
+
 import { generateAiLeagueMembers, AI_ARCHETYPES, buildRosterForArchetype } from './utils/aiOpponents';
-import { calculateTeamRatings } from './evaluation';
+import { calculateTeamRatings } from './utils/evaluation';
 import { simulateFullSeason } from './utils/simulation';
 import { PLAYERS_DATABASE } from './data/players';
 import { countRosterGroups, getDraftPositionGroup, minimumCompletionCost, validateRosterShape } from './utils/rosterRules';
