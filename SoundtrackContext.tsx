@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
-import { globalSoundtrackEngine, SOUNDTRACK_TRACKS, SoundtrackTrack } from '../utils/soundtrackEngine';
+import { globalSoundtrackEngine, SOUNDTRACK_TRACKS, SoundtrackTrack } from './utils/soundtrackEngine';
 
 interface SoundtrackContextType {
   isPlaying: boolean;
