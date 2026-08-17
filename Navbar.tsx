@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useBallKnower } from '../context/BallKnowerContext';
+import { useBallKnower } from './BallKnowerContext';
 import { Trophy, Shield, User, LogOut, ChevronDown, Sparkles, Plus, Users, Award, Play } from 'lucide-react';
 import { SoundtrackControl } from './SoundtrackControl';
 
