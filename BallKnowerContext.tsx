@@ -7,13 +7,13 @@ import {
   ROSTER_REQUIREMENTS,
   DEFAULT_SALARY_CAP,
   TOTAL_ROSTER_SIZE,
-} from '../types';
+} from './types';
 import { calculateTeamRatings } from './utils/evaluation';
 import { simulateFullSeason } from './utils/simulation';
 import { generateAiLeagueMembers, AI_ARCHETYPES, buildRosterForArchetype } from './utils/aiOpponents';
-import { PLAYERS_DATABASE } from '../data/players';
+import { PLAYERS_DATABASE } from './data/players';
 import { countRosterGroups, getDraftPositionGroup, minimumCompletionCost, validateRosterShape } from './utils/rosterRules';
-import { isCloudConfigured, ensureOnlineSession } from '../lib/supabase';
+import { isCloudConfigured, ensureOnlineSession } from './lib/supabase';
 import {
   createCloudLeague, joinCloudLeague, loadMyCloudLeagues, fetchCloudLeague,
   saveMyCloudRoster, updateCloudLeague, upsertAiCloudMembers, deleteCloudMember,
