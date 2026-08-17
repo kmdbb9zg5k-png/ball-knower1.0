@@ -7,10 +7,9 @@ import {
   ROSTER_REQUIREMENTS,
   DEFAULT_SALARY_CAP,
   TOTAL_ROSTER_SIZE,
-} from './types';
+import { generateAiLeagueMembers, AI_ARCHETYPES, buildRosterForArchetype } from './utils/aiOpponents';
 import { calculateTeamRatings } from './evaluation';
 import { simulateFullSeason } from './utils/simulation';
-import { generateAiLeagueMembers, AI_ARCHETYPES, buildRosterForArchetype } from './utils/aiOpponents';
 import { PLAYERS_DATABASE } from './data/players';
 import { countRosterGroups, getDraftPositionGroup, minimumCompletionCost, validateRosterShape } from './utils/rosterRules';
 import { isCloudConfigured, ensureOnlineSession } from './lib/supabase';
